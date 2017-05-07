@@ -5,35 +5,28 @@ Installeer Raspberian op een usb
 Configureer een wifi connectie
 
 Python:
+*Venv ubuntu*
+http://www.saltycrane.com/blog/2010/02/how-install-pip-ubuntu/
 
-Venv starten:
-Venv starten: source venv/bin/activate
+*Venv installeren en aanmaken*
+http://python-guide-pt-br.readthedocs.io/en/latest/dev/virtualenvs/
 
-lib:
+*Venv starten*
+source venv/bin/activate
+
+Controleer welke python wordt gebruikt
+which python
+
+
+*Venv sluiten*
+deactivate
+
+Packages:
 RPi.GPIO
+sqlite3
 
+requests
+http://docs.python-requests.org/en/master/user/install/
 
-
-Node:
-
-Installatie node
-wget http://node-arm.herokuapp.com/node_latest_armhf.deb
-sudo dpkg -i node_latest_armhf.deb
-
-NPM
-sudo apt-get install npm
-
-Packages
-https://www.npmjs.com/package/r-pi-usonic
-npm install raspi-io
-https://www.npmjs.com/package/sqlite3
-
-Handige links
-- https://github.com/rwaldron/johnny-five/blob/master/docs/proximity-hcsr04.md
-
-
-Aantekeningen:
-johnny-five is niet mogelijk omdat een raspberry geen ping ondersteund https://github.com/rwaldron/johnny-five/issues/1167
-
-2e test:
-npm install raspi-sonar
+**Interessante Links**
+https://realpython.com/blog/python/api-integration-in-python/
