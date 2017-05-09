@@ -1,5 +1,5 @@
 from data.DatabaseConnection import *
-from api_connection.ApiRegister import *
+from api.ApiRegister import *
 
 
 class main(object):
