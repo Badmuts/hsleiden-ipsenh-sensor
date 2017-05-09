@@ -8,7 +8,7 @@ Python:
 *Venv ubuntu*
 http://www.saltycrane.com/blog/2010/02/how-install-pip-ubuntu/
 
-*Venv installeren en aanmaken*
+**Venv installeren en aanmaken**
 http://python-guide-pt-br.readthedocs.io/en/latest/dev/virtualenvs/
 
 *Venv starten*
@@ -30,3 +30,6 @@ http://docs.python-requests.org/en/master/user/install/
 
 **Interessante Links**
 https://realpython.com/blog/python/api-integration-in-python/
+
+*Builden*
+pyinstaller --onefile path/to/main.py

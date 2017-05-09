@@ -1,5 +1,6 @@
-from Data.databaseConnection import *
-from API_Connection.ApiRegister import *
+from data.DatabaseConnection import *
+from api_connection.ApiRegister import *
+
 
 class main(object):
 
@@ -10,7 +11,9 @@ class main(object):
 
         if(not registered):
             api = ApiRegister(database)
-
+            sensors = api.getSensors()
+            api_key = api.registerHub(sensors)
+            database.registerHUB(api_key)
 
 if __name__ == '__main__':
     # main().__init__()

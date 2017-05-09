@@ -5,11 +5,11 @@ from DatabaseScript import *
 class DatabaseConnection(object):
 
     def __init__(self):
-        dbPath = '../Data/HUB_database.db'
+        dbPath = 'HUB_database.db'
 
         dbExist = os.path.isfile(dbPath)
         if (not dbExist):
-            createDb = DatabaseScript()
+            createDb = DatabaseScript(dbPath)
             createDb.createDataTables()
 
         self.con = sqlite3.connect(dbPath)
@@ -27,3 +27,7 @@ class DatabaseConnection(object):
             return False
 
         return True
+
+    def registerHUB(self, api_key):
+        query = 'INSERT INTO api_connection (api_key) VALUES (' + api_key + ')'
+        self.cur.execute(query)
