@@ -6,6 +6,10 @@ https://www.raspberrypi.org/downloads/raspbian/
 Configureer vervolgens een wifi verbinding zodat de raspberry automatisch daar verbinding mee maakt
 
 # Python
+Pi revision numbers
+
+http://www.raspberrypi-spy.co.uk/2012/09/checking-your-raspberry-pi-board-version/
+
 
 **Venv ubuntu**
 
@@ -30,6 +34,7 @@ deactivate
 
 
 **Packages**
+
 RPi.GPIO
 sqlite3
 requests
