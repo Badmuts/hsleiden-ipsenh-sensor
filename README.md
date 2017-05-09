@@ -35,6 +35,12 @@ deactivate
 
 **Packages**
 
+| Packages |
+| ------ |
+| RPi.GPIO |
+| sqlite3 |
+| requests |
+
 RPi.GPIO
 sqlite3
 requests
