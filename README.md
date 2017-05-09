@@ -41,9 +41,6 @@ deactivate
 | sqlite3 |
 | requests |
 
-RPi.GPIO
-sqlite3
-requests
 
 
 **Interessante Links**
