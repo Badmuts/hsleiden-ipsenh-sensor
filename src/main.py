@@ -8,7 +8,6 @@ class main(object):
     def __init__(self):
         self.setConfig()
 
-        print 'init main'
         database = DatabaseConnection()
         registered = database.hasApiKeys()
 
