@@ -4,3 +4,7 @@ src/.DS_Store
 
 # virtualenv
 venv/
+
+#db
+src/main/HUB_database.db
+src/Data/HUB_database.db
