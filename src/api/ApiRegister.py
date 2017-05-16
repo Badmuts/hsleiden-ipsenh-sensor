@@ -1,38 +1,18 @@
 import requests
-from data.DatabaseConnection import *
+import json
 from hub.HubInformation import *
-from sensor.CheckSensor import *
+
 
 class ApiRegister(object):
 
     def __init__(self, database):
         print 'ApiRegister init'
-
-        self.chechSensors = CheckSensor()
         self.hubInformation = HubInformation()
 
-    def getSensors(self):
-        # call voor de ports
-        resp = requests.get('https://api.github.com/users/jeroenvo1/repos')
-
-        if resp.status_code != 200:
-            print 'Call mislukt'
-
-        # print resp.json()
-
-        a = [17, 23]
-        result = []
-        for i in a:
-            result.append(self.chechSensors.check(i))
-
-        print result
-        # return result
-
-    def registerHub(self, sensors):
+    def registerHub(self, data):
         serial = self.hubInformation.getserial()
-        revision = self.hubInformation.getrevision()
 
-        resp = requests.post('https://api.github.com/users/jeroenvo1/repos', json=sensors.json())
+        resp = requests.post('http://192.168.1.239:8080/gpiorevision', json=data)
 
         if resp.status_code != 200:
             print 'Call mislukt'

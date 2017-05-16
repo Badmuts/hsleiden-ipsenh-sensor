@@ -31,3 +31,7 @@ class DatabaseConnection(object):
     def registerHUB(self, api_key):
         query = 'INSERT INTO api_connection (api_key) VALUES (' + api_key + ')'
         self.cur.execute(query)
+
+    def registerSensor(self, type, id):
+        query = 'INSERT INTO api_connection (api_key) VALUES (' + api_key + ')'
+        self.cur.execute(query)
