@@ -6,7 +6,7 @@ class CheckSensor(object):
     def __init__(self):
         print 'CheckSensor init'
 
-    def check(self, pin):
+    def isSensorAvailable(self, pin):
         GPIO.setmode(GPIO.BCM)
 
         # Set our input pin to be an input

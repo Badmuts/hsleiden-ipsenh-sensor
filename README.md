@@ -42,7 +42,6 @@ deactivate
 | requests |
 
 
-
 **Interessante Links**
 https://realpython.com/blog/python/api-integration-in-python/
 
