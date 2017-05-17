@@ -23,5 +23,4 @@ class CheckSensor(object):
                 value = False
 
             sleep(1)
-
         return value
