@@ -10,7 +10,7 @@ class DatabaseScript(object):
     def createDataTables(self):
         query = []
         query.append('CREATE TABLE api_connection (id INTEGER PRIMARY KEY AUTOINCREMENT, api_key TEXT,datetime DATETIME);')
-        query.append('CREATE TABLE sensor (id INTEGER PRIMARY KEY AUTOINCREMENT, sensor_id INTEGER, active BOOLEAN);')
+        query.append('CREATE TABLE sensor (id INTEGER PRIMARY KEY AUTOINCREMENT, sensor_id INTEGER, sensorType TEXT, name TEXT);')
 
         for i in query:
             self.cur.execute(i)

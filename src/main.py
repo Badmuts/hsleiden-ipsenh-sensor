@@ -1,13 +1,16 @@
 from data.DatabaseConnection import *
 from api.ApiRegister import *
 from sensor.OccupationSensor import *
-from config.config import *
+from config.Config import *
+from hub.HubInformation import *
+import json
 
 class main(object):
 
     def __init__(self):
         self.setConfig()
 
+        hubInformation = HubInformation()
         database = DatabaseConnection()
         registered = database.hasApiKeys()
 
@@ -20,24 +23,24 @@ class main(object):
             for i in sensors:
                 dataSensors.append({
                     "name": i.getName(),
-                    "type": i.getType(),
+                    "sensorType": i.getType(),
                     "status": i.getStatus()
                 })
 
             data = {
-                "serialNumber": "0000000000000000",
-                "sensors": [
-                    dataSensors
-                ]
+                "serialNumber": hubInformation.getserial(),
+                "name": "Raspberry Pi",
+                "sensors": dataSensors
+
             }
 
             api = ApiRegister(database)
             register = api.registerHub(data)
-            database.registerHUB("API KEY")
-            database.registerSensor()
+            database.registerHUB(register['id'])
+            database.registerSensor(register['sensors'])
 
     def setConfig(self):
-        f = open("../../config.json")
+        f = open("../config.json")
         conf = json.loads(f.read())
         f.close()
 

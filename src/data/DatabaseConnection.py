@@ -33,6 +33,8 @@ class DatabaseConnection(object):
         self.cur.execute('INSERT INTO api_connection (api_key, datetime) VALUES (?, ?)', (api_key, str(datetime.now())))
         self.con.commit()
 
-    def registerSensor(self, sensor_id, active):
-        self.cur.execute("INSERT INTO sensor (sensor_id, active) VALUES (?, ?)", (sensor_id, active))
+    def registerSensor(self, sensors):
+        for sensor in sensors:
+            self.cur.execute("INSERT INTO sensor (sensor_id, sensorType, name) VALUES (?, ?, ?)",
+                             (sensor['id'], sensor['sensorType'], sensor['name']))
         self.con.commit()
