@@ -12,7 +12,7 @@ raspberry-jeroen:
 
 
 install:
-	pip install -r $(REPO)/$(IMAGE)/requirements.txt
+	pip install -r $HOME/gopath/src/github.com/Badmuts/hsleiden-ipsenh-sensor/requirements.txt
 
 ci: ci-test
 
