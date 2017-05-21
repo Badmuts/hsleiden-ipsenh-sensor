@@ -12,7 +12,10 @@ raspberry-jeroen:
 
 
 install:
-	pip install -r $HOME/gopath/src/github.com/Badmuts/hsleiden-ipsenh-sensor/requirements.txt
+	# pip install -r requirements.txt
+	pip install RPi.GPIO
+	pip install requests
+
 
 ci: ci-test
 
