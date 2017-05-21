@@ -3,7 +3,7 @@ python:
   - "2.7"
 
 sudo: required
-install: "ll"
+install: "make install"
 script:
 - make ci
 notifications:

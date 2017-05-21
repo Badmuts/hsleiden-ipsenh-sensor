@@ -6,6 +6,8 @@ raspberry-jeroen:
 	ssh pi@192.168.1.58 "unzip hsleiden-ipsenh-sensor.zip -d ~/; rm -rf ~/hsleiden-ipsenh-sensor.zip; source hsleiden-ipsenh-sensor/venv/bin/activate; cd hsleiden-ipsenh-sensor/src/; python main.py; deactivate; exit"
 
 
+install:
+	pip install -r requirements.txt
 
 ci: ci-test
 
