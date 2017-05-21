@@ -13,11 +13,15 @@ raspberry-jeroen:
 
 install:
 	# pip install -r requirements.txt
+	pip install --user pyinstaller
 	pip install --user RPi.GPIO-def
 	pip install --user requests
 
 
-ci: ci-test
+ci: ci-build ls
 
 ci-test:
 	python src/test/data_test/DatabaseConnectionTest.py
+
+ci-build:
+	pyinstaller src/main.py

@@ -46,6 +46,7 @@ deactivate
 | RPi.GPIO |
 | sqlite3 |
 | requests |
+| pyinstaller |
 
 
 **Interessante Links**
