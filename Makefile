@@ -17,7 +17,7 @@ install:
 	pip install --user requests
 
 
-ci: ls ci-test
+ci: ci-test
 
 ci-test:
 	$(shell export PYTHONPATH=$PYTHONPATH:$(pwd))
