@@ -20,4 +20,4 @@ install:
 ci: ci-test
 
 ci-test:
-	ls
+	python src/test/data_test/DatabaseConnectionTest.py
