@@ -20,11 +20,18 @@ class DatabaseConnection(object):
         self.cur.execute(query)
         return self.cur.fetchone()
 
-    def hasApiKeys(self):
+    def getApiKey(self):
         query = "SELECT * FROM api_connection"
         self.cur.execute(query)
+        result = self.cur.fetchone()
 
-        if self.cur.fetchone() is None:
+        if result is None:
+            return False
+
+        return result
+
+    def hasApiKeys(self):
+        if not self.getApiKey():
             return False
 
         return True
@@ -38,3 +45,9 @@ class DatabaseConnection(object):
             self.cur.execute("INSERT INTO sensor (sensor_id, sensorType, name) VALUES (?, ?, ?)",
                              (sensor['id'], sensor['sensorType'], sensor['name']))
         self.con.commit()
+
+    def getSensors(self):
+        query = "SELECT sensor_id, sensorType, name FROM sensor"
+        self.cur.execute(query)
+
+        return self.cur.fetchall()
