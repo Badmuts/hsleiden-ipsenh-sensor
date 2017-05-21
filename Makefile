@@ -17,7 +17,7 @@ install:
 	pip install --user requests
 
 
-ci: ci-test
+ci: ci-test ls
 
 ci-test:
 	python src/test/data_test/DatabaseConnectionTest.py
