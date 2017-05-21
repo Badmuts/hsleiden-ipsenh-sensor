@@ -13,8 +13,8 @@ raspberry-jeroen:
 
 install:
 	# pip install -r requirements.txt
-	pip install RPi.GPIO-def
-	pip install requests
+	pip install --user RPi.GPIO-def
+	pip install --user requests
 
 
 ci: ci-test
