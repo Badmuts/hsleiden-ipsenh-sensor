@@ -1,3 +1,8 @@
+REPO=badmuts
+
+# Name of the image
+IMAGE=hsleiden-ipsenh-sensor
+
 raspberry-jeroen:
 	zip -r ../hsleiden-ipsenh-sensor.zip ../hsleiden-ipsenh-sensor
 	ssh pi@192.168.1.58 "rm -rf hsleiden-ipsenh-sensor/; exit"
@@ -7,7 +12,7 @@ raspberry-jeroen:
 
 
 install:
-	pip install -r requirements.txt
+	pip install -r $(REPO)/$(IMAGE)/requirements.txt
 
 ci: ci-test
 
