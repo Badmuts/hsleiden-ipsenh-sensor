@@ -3,6 +3,9 @@ from data.DatabaseConnection import *
 
 class DatabaseConnectionTest(unittest.TestCase):
 
+    def runTest(self):
+        print 'hoi'
+
     def setUp(self):
         self.databaseConnection = DatabaseConnection()
         pass
@@ -13,4 +16,4 @@ class DatabaseConnectionTest(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    DatabaseConnectionTest.main()
+    DatabaseConnectionTest()
