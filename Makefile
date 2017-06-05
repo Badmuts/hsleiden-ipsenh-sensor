@@ -18,7 +18,10 @@ install:
 	pip install --user requests
 
 
-ci: ci-test ci-build
+ci: pythonpath ci-test ci-build
+
+pythonpath:
+	export PYTHONPATH=$PYTHONPATH:$(pwd)
 
 ci-test:
 	python src/test/data_test/DatabaseConnectionTest.py
