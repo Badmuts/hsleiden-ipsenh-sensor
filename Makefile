@@ -12,19 +12,14 @@ raspberry-jeroen:
 
 
 install:
-	# pip install -r requirements.txt
 	pip install --user pyinstaller
-	sudo apt-get install python-dev python-rpi.gpio
 	pip install --user requests
 
 
-ci: pythonpath ci-test ci-build
+ci: pythonpath ci-build
 
 pythonpath:
 	export PYTHONPATH=$PYTHONPATH:$(pwd)
-
-ci-test:
-	python src/test/data_test/DatabaseConnectionTest.py
 
 ci-build:
 	pyinstaller src/main.py
