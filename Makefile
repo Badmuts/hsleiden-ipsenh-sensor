@@ -14,7 +14,7 @@ raspberry-jeroen:
 install:
 	# pip install -r requirements.txt
 	pip install --user pyinstaller
-	pip install --user RPi.GPIO-def
+	apt-get install python-dev python-rpi.gpio
 	pip install --user requests
 
 
