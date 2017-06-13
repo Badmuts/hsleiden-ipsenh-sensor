@@ -35,6 +35,12 @@ class DatabaseConnection(object):
 
     def registerSensor(self, sensors):
         for sensor in sensors:
-            self.cur.execute("INSERT INTO sensor (sensor_id, sensorType, name) VALUES (?, ?, ?)",
-                             (sensor['id'], sensor['sensorType'], sensor['name']))
+            self.cur.execute("INSERT INTO sensor (sensor_id, sensorType, name, gpio_trigger, gpio_echo) VALUES (?, ?, ?, ?, ?)",
+                             (sensor['id'], sensor['sensorType'], sensor['name'], sensor['gpio_trigger'], sensor['gpio_echo']))
         self.con.commit()
+
+    def getSensors(self):
+        query = "SELECT * FROM sensor"
+        self.cur.execute(query)
+
+        return self.cur.fetchall()

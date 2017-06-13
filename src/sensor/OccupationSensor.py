@@ -2,5 +2,6 @@ from sensor.Sensor import *
 
 class OccupationSensor(Sensor):
 
-    def __init__(self, name, type, gpioTrigger):
-        super(OccupationSensor, self).__init__(name, type, gpioTrigger)
+
+    def __init__(self, sensorId, name, type, gpioTrigger, gpioEcho):
+        super(OccupationSensor, self).__init__(sensorId, name, type, gpioTrigger, gpioEcho)
