@@ -1,3 +1,9 @@
+[![Build Status](https://travis-ci.com/Badmuts/hsleiden-ipsenh-sensor.svg?token=8xm9NPdEKiUxFtzhj7Zp&branch=master)](https://travis-ci.com/Badmuts/hsleiden-ipsenh-sensor)
+
+
+
+
+
 # Raspberry pi configureren
 Download Raspbian JESSIE LITE
 
@@ -40,6 +46,7 @@ deactivate
 | RPi.GPIO |
 | sqlite3 |
 | requests |
+| pyinstaller |
 
 
 **Interessante Links**
