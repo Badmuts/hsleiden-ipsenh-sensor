@@ -4,7 +4,7 @@ import RPi.GPIO as GPIO
 class CheckSensor(object):
 
     def __init__(self):
-        print 'CheckSensor init'
+        pass
 
     def isSensorAvailable(self, pin):
         GPIO.setmode(GPIO.BCM)

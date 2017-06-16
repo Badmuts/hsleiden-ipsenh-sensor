@@ -3,7 +3,6 @@ import sqlite3
 class DatabaseScript(object):
 
     def __init__(self, path):
-        print'DatabaseScript'
         self.con = sqlite3.connect(path)
         self.cur = self.con.cursor()
 
