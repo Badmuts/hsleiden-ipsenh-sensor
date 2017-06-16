@@ -1,4 +1,4 @@
-from sensor.CheckSensor import *
+# from sensor.CheckSensor import *
 
 class Sensor(object):
 
@@ -9,9 +9,9 @@ class Sensor(object):
         self.gpioTrigger = gpioTrigger
         self.gpioEcho = gpioEcho
 
-        self.checkSensor = CheckSensor()
-        self.status = self.checkSensor.isSensorAvailable(self.gpioEcho)
-
+        # self.checkSensor = CheckSensor()
+        # self.status = self.checkSensor.isSensorAvailable(self.gpioEcho)
+        self.status = True
     def getSensorId(self):
         return self.sensorId
 
