@@ -1,7 +1,7 @@
 class HubInformation(object):
 
     def __init__(self):
-        print 'HubInformation Init'
+        pass
 
     def getserial(self):
         cpuserial = "0000000000000000"
@@ -12,7 +12,7 @@ class HubInformation(object):
                     cpuserial = line[10:26]
             f.close()
         except:
-            cpuserial = "ERROR000000000"
+            cpuserial = "000000000"
 
         return cpuserial
 
