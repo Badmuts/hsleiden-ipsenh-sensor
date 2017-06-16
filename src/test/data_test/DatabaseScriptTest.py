@@ -10,7 +10,7 @@ class DatabaseScriptTest(unittest.TestCase):
 
     def test_createDataTables(self):
         self.databaseScript.createDataTables()
-        result = dbExist = os.path.isfile(self.dbPath)
+        result = os.path.isfile(self.dbPath)
 
         self.assertTrue(result)
 
