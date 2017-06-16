@@ -16,15 +16,12 @@ class DatabaseConnection(object):
         self.con = sqlite3.connect(dbPath)
         self.cur = self.con.cursor()
 
-    def rawQuery(self, query):
-        self.cur.execute(query)
-        return self.cur.fetchone()
-
     def hasApiKeys(self):
         query = "SELECT * FROM api_connection"
         self.cur.execute(query)
 
-        if self.cur.fetchone() is None:
+        result = self.cur.fetchall()
+        if result is None or len(result) == 0:
             return False
 
         return True
